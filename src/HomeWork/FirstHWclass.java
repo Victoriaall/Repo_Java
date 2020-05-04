@@ -62,7 +62,7 @@ public class FirstHWclass {
        int popuHund = 810;
         System.out.println("Current population of the country is " + popuMill +","+popuThou+","+popuHund+ " people.");
 /*5. interest rate*/
-        float interestRate = 3.560f;
+        double interestRate = 3.560;
         System.out.println("Current interest rate is " + interestRate + "%.");
 /*6.balance in a bank account */
         double balance = 100;
