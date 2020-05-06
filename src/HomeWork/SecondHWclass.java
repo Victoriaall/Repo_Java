@@ -34,9 +34,8 @@ public class SecondHWclass {
  */
         // 1. Fetch the last word of the sentence.
         String myStatement = "I am a good programmer";
-        int myStatementLength = myStatement.length();
-        String lastWord = myStatement.substring(myStatementLength - 10);
-        System.out.println("Last word of the statement is '" + lastWord + "'");
+        String [] myStatementLength = myStatement.split("p");
+        System.out.println(Arrays.toString(myStatementLength));
         // 2.Display the total number of words in the myStatement.
         String[] totalWords = myStatement.split(" ");
         System.out.println(Arrays.toString(totalWords));
