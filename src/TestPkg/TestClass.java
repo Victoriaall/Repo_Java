@@ -1,114 +1,113 @@
 package TestPkg;
 
-import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
-import sun.util.calendar.CalendarDate;
 
-import javax.swing.*;
 import java.util.Arrays;
 
 public class TestClass {
 
     public static void main(String[] args) {
-        String sentence = "Hello,dear. how are you";
-        boolean newsentence = sentence.length() > 10 ? true : false;
-        System.out.println(newsentence);
-        /*
-         * String fullName = "";
-         * String isEnrolled =
-         *      Assign "enrolled" if first-name length is greater than 7 or first-name starts with "A"
-         *      else "try later"
-         *
-         * print the isEnrolled value.
-         */
-        //String fullName = "hello dear how are you";
-        int studentScore = 135;
-        double maxScore = 150;
-//calculate percentage
-//Your percentage: XX.yy and your grade is: A
-        double scorePercentage = (studentScore / maxScore) * 100;
-        char studentGrade;
-        if (scorePercentage >= 91) {
-            studentGrade = 'A';
-        } else if (scorePercentage <= 90 && scorePercentage >= 81) {
-            studentGrade = 'B';
-        } else if (scorePercentage <= 80 && scorePercentage >= 71) {
-            studentGrade = 'C';
-        } else if (scorePercentage <= 70 && scorePercentage >= 61) {
-            studentGrade = 'D';
-        } else if (scorePercentage <= 60 && scorePercentage >= 51) {
-            studentGrade = 'E';
-        } else {
-            studentGrade = 'F';
-        }
-        System.out.println("Your percentage: " + scorePercentage + " and your grade is: " + studentGrade);
+        String sentence = "happy new year";
+        String[] words = sentence.split(" ");
+
+        words[0] = words[0].substring(0, 1).toUpperCase() + words[0].substring(1).toLowerCase();
+        words[1] = words[1].substring(0, 1).toUpperCase() + words[1].substring(1).toLowerCase();
+        words[2] = words[2].substring(0, 1).toUpperCase() + words[2].substring(1).toLowerCase();
+        sentence = words[0] + " " + words[1] + " " + words[2];
+        System.out.println("Sentence with upper first letter " + sentence);
 /**
- * Checking car mode (P, D, N, R)
- * if car mode is P and "you can park car"
- * if car mode is D drive car
- *      if drive type is Snow, display "You are on Snow mode"
- *      if drive type is Sport, display "You are on Sport mode"
- *      if drive type is Eco, display "You are on Eco mode"
- * if car mode is N you can "put car in car wash"
- * if car mode is R you can "revere the car"
+ * Write code to create abbreviation for any given string
+ * Example: String msg = "Outfit of the day" //
+ * Expected: OOTD //GM HAGDTY
+ * String msg = "have a great day to you"
+ *
+ * //code
+ *
+ * sout("Abbreviation : " + abr);
  */
-
-        String carType = "eco";
-        char carMode = 'd';
-        String message_1 = "";
-        String message_2 = "";
-
-        String carTypeCase = carType.toLowerCase();
-        carMode = Character.toLowerCase(carMode);
-        switch ( carMode){
-            case 'p':
-                message_1 = "You can park car";
-                break;
-            case 'd':
-                message_1 = "You can drive : ";
-             switch (carTypeCase) {
-                 case "snow":
-                     message_2 = "You are on Snow mode";
-                     break;
-                 case "sport":
-                     message_2 = "You are on Sport mode";
-                     break;
-                 case "eco":
-                     message_2 = "You are on Eco mode";
-                     break;
-             }
-             break;
-             case 'n':
-                 message_1 = "Put car in car wash";
-                 break;
-             case 'r':
-                 message_1 = "Reverse the car";
-                break;
+        String msg = "have a great day to you";
+        String abr = "";
+//code
+        System.out.println("Abbreviation: " + abr);
+        String[] words_1 = msg.split(" ");
+        for (int i = 0; i < words_1.length; i++) {
+            words_1[i] = words_1[i].substring(0, 1).toUpperCase();
+            abr += words_1[i];
         }
-        System.out.println("Message : " + message_1 + message_2 );
+        System.out.println("Abbreviation: " + abr);
+
+        String sent = "today is a great day my love ";
+        String everySecondUp = " ";
+        String[] sent_1 = sent.split(" ");
+        for (int i = 0; i < sent_1.length; i++) {
+            if (i % 2 == 0) {
+                sent_1[i] = sent_1[i].substring(0, 1).toUpperCase() + sent_1[i].substring(1).toLowerCase() + " ";
+            } else {
+                sent_1[i] = sent_1[i].toLowerCase() + " ";
+
+            }
+            everySecondUp += sent_1[i];
+        }
+        System.out.println("My every second word is upcase:" + everySecondUp);
+
+
+/**
+ * reverse a string
+ */
+        String message = "happy holidays"; //syadiloh yppah
+        String reverseMessage = "";
+
+        for (int i = message.length(); i > 0; i--) {
+            reverseMessage += message.substring(i - 1, i);
+        }
+        System.out.println("Message : " + message);
+        System.out.println("Message in reverse: " + reverseMessage);
+
+        String[] names_1 = {"happy", "peace", "laugh", "love", "grow", "learn"};
+        for (int i = 0; i < names_1.length; i++) {
+            System.out.println("Name_1 : " + names_1[i]);
+        }
+        //String[] names = {"happy", "peace", "laugh", "love", "grow", "learn"};
+        // take values from names-array, print the name if name-length is 5 or more,
+        // and print like: Happy (first-letter in uppercase and rest in lowercase
+        String[] names_2 = {"happy", "peace", "laugh", "love", "grow", "learn"};
+        for (int i = 0; i < names_2.length; i++) {
+            if (names_2[i].length() >= 5) {
+                names_2[i] = names_2[i].substring(0,1).toUpperCase() + names_2[i].substring(1).toLowerCase();
+                System.out.println("Name_2 :" + names_2[i]);}
+        }
+        String myName = "BakTYgul AlgZHOEVA";
+        String correct = "";
+        String [] myNameArray = myName.split(" ");
+        for (int i = 0;i < myNameArray.length; i++){
+            myNameArray[i] = myNameArray[i].substring(0,1).toUpperCase() + myNameArray[i].substring(1).toLowerCase()+ " ";
+            correct += myNameArray[i];
+        }
+        System.out.println( " My correct name : " + correct);
         /**
-         * store value in an int variable
-         * if number is divisible by 3, print "divisible by 3"
-         * if number is divisible by 5, print "divisible by 5"
-         * if number is divisible by 3 and 5, print "divisible by both"
-         * if not divisible by 3 or 5, print the number
-         *
+         * Check if word is palindrome
          */
-
-        int var = 10;
-
-        if (var % 5 ==0 && var % 3 == 0) {
-            System.out.println(" divisible by both");
-        }
-        else if (var % 5 == 0){
-            System.out.println(" divisible by 5");
-        }
-        else if (var % 3 == 0){
-            System.out.println(" divisible by 3");
-        }
-        else{
-            System.out.println( + var );
-        }
-    }
+        String word = "level";  //ecar
+        String word_1 = "";
+        boolean result =false;
+        for ( int i = word.length(); i > 0; i-- ){
+            word_1 += word.substring(i - 1, i);}
+            if (word_1.equals(word) ){
+            result = true;}
+        System.out.println("is " + word + " a palindrome: " + result);
 
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 

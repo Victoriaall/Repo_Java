@@ -1,30 +1,25 @@
 package HomeWork;
 
 public class ThirdHWclass {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         //calculate percentage
         //Your percentage: XX.yy and your grade is: A
         int studentScore = 135;
         double maxScore = 150;
-        double scorePercentage = (studentScore/ maxScore) * 100 ;
-        char studentGrade ;
-        if (scorePercentage >= 91){
+        double scorePercentage = (studentScore / maxScore) * 100;
+        char studentGrade;
+        if (scorePercentage >= 91) {
             studentGrade = 'A';
-        }
-        else if (scorePercentage <= 90 && scorePercentage >= 81 ){
+        } else if (scorePercentage <= 90 && scorePercentage >= 81) {
             studentGrade = 'B';
-        }
-        else if (scorePercentage <= 80 && scorePercentage >= 71 ){
+        } else if (scorePercentage <= 80 && scorePercentage >= 71) {
             studentGrade = 'C';
-        }
-        else if (scorePercentage <= 70 && scorePercentage >= 61 ){
+        } else if (scorePercentage <= 70 && scorePercentage >= 61) {
             studentGrade = 'D';
-        }
-        else if (scorePercentage <= 60 && scorePercentage >= 51 ){
+        } else if (scorePercentage <= 60 && scorePercentage >= 51) {
             studentGrade = 'E';
-        }
-        else {
+        } else {
             studentGrade = 'F';
         }
         System.out.println("Your percentage: " + scorePercentage + " and your grade is: " + studentGrade);
@@ -47,7 +42,7 @@ public class ThirdHWclass {
 
         String carTypeCase = carType.toLowerCase();
         carMode = Character.toLowerCase(carMode);
-        switch ( carMode){
+        switch (carMode) {
             case 'p':
                 message_1 = "You can park car";
                 break;
@@ -72,29 +67,24 @@ public class ThirdHWclass {
                 message_1 = "Reverse the car";
                 break;
         }
-        System.out.println("Message : " + message_1 + message_2 );
+        System.out.println("Message : " + message_1 + message_2);
 
         /**
-        * store value in an int variable
-        * if number is divisible by 3, print "divisible by 3"
-        * if number is divisible by 5, print "divisible by 5"* if number is divisible by 3 and 5, print "divisible by both"
-        * if not divisible by 3 or 5, print the number
-        */
+         * store value in an int variable
+         * if number is divisible by 3, print "divisible by 3"
+         * if number is divisible by 5, print "divisible by 5"* if number is divisible by 3 and 5, print "divisible by both"
+         * if not divisible by 3 or 5, print the number
+         */
 
-        int num = 9;
+        int num = 1;
         if (num % 5 == 0 && num % 3 == 0) {
             System.out.println("divisible by both");
-        }
-        else if (num % 5 == 0){
+        } else if (num % 5 == 0) {
             System.out.println("divisible by 5");
-        }
-        else if (num % 3 == 0){
+        } else if (num % 3 == 0) {
             System.out.println("divisible by 3");
-        }
-        else {
-            System.out.println( + num );
-
-
+        } else {
+            System.out.println(+num);
         }
     }
 }
