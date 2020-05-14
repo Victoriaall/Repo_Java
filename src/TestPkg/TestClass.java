@@ -1,8 +1,5 @@
 package TestPkg;
 
-
-import java.util.Arrays;
-
 public class TestClass {
 
     public static void main(String[] args) {
@@ -72,42 +69,18 @@ public class TestClass {
         String[] names_2 = {"happy", "peace", "laugh", "love", "grow", "learn"};
         for (int i = 0; i < names_2.length; i++) {
             if (names_2[i].length() >= 5) {
-                names_2[i] = names_2[i].substring(0,1).toUpperCase() + names_2[i].substring(1).toLowerCase();
-                System.out.println("Name_2 :" + names_2[i]);}
+                names_2[i] = names_2[i].substring(0, 1).toUpperCase() + names_2[i].substring(1).toLowerCase();
+                System.out.println("Name_2 :" + names_2[i]);
+            }
         }
         String myName = "BakTYgul AlgZHOEVA";
         String correct = "";
-        String [] myNameArray = myName.split(" ");
-        for (int i = 0;i < myNameArray.length; i++){
-            myNameArray[i] = myNameArray[i].substring(0,1).toUpperCase() + myNameArray[i].substring(1).toLowerCase()+ " ";
+        String[] myNameArray = myName.split(" ");
+        for (int i = 0; i < myNameArray.length; i++) {
+            myNameArray[i] = myNameArray[i].substring(0, 1).toUpperCase() + myNameArray[i].substring(1).toLowerCase() + " ";
             correct += myNameArray[i];
         }
-        System.out.println( " My correct name : " + correct);
-        /**
-         * Check if word is palindrome
-         */
-        String word = "level";  //ecar
-        String word_1 = "";
-        boolean result =false;
-        for ( int i = word.length(); i > 0; i-- ){
-            word_1 += word.substring(i - 1, i);}
-            if (word_1.equals(word) ){
-            result = true;}
-        System.out.println("is " + word + " a palindrome: " + result);
+        System.out.println(" My correct name : " + correct);
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
