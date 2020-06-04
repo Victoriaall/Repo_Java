@@ -13,10 +13,13 @@ public class Test {
         System.out.println(t1.returnMissingNum(array1));
         int userSpeed= 88;
         t1.speedLimitPoints (userSpeed);
+
     }
+
   public int[] removeTheNumber(int[] array, int numberToRemove) {
         int[] newArray = new int[array.length];
         int newIndex = 0;
+
         for (int i = 0; i < array.length; i++) {
             if ( numberToRemove != array[i] ) {
                 newArray[newIndex] = array[i];
@@ -36,12 +39,13 @@ public class Test {
                 max = array1[i];
             }
         }
-        boolean keepGoing = false;
+        boolean keepGoing = true;
         while ( missingNumber < max && keepGoing ){
+            keepGoing= false;
             for (int i = 0; i < array1.length; i++){
                 if (missingNumber == array1[i]){
                 missingNumber +=1;
-                keepGoing = true;
+                keepGoing= true;
             }
         }
         }
@@ -59,6 +63,8 @@ public class Test {
         System.out.println( points + " points");
     }
 }
+
+
 }
 
 

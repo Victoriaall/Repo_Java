@@ -46,6 +46,7 @@ public class SecondHWclass {
         Calculate the length of your name, without using length() method of String class.
        */
        String name = "becky";
+
        String [] nameSplit = name.split("");
         System.out.println("name length : " + nameSplit.length );
 
